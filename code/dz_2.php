@@ -19,7 +19,7 @@ function mul($a, $b, $operation){
 }
 function div($a, $b, $operation){
     if ($operation == "div") {
-        return $a / $b;
+        return ($b!=0) ? $a / $b: "деление на ноль";
     }
 }
 //Реализовать функцию с тремя параметрами: function mathOperation($arg1, $arg2, $operation),
@@ -30,16 +30,12 @@ function mathOperation($a, $b, $operation){
     switch ($operation){
         case "add":
             return add($a, $b, $operation);
-            break;
             case "sub":
                 return sub($a, $b, $operation);
-                break;
                 case "mul":
                     return mul($a, $b, $operation);
-                    break;
                     case "div":
                         return div($a, $b, $operation);
-                        break;
         default:
             return null;
     }
